@@ -1,0 +1,13 @@
+.boton{
+    margin-left: 1rem;
+    padding: 0 0.3rem 0 0.3rem;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    color: whitesmoke;
+}
+
+.boton:hover{
+    border: 1px solid #5e6472;
+    color: #5e6472;
+    background-color: #d4a373;
+}
