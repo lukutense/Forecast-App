@@ -5,7 +5,6 @@ import {Flex, Box, Text} from '@chakra-ui/react'
 const FirstComponent = ({dataCity,bool, dt, timeZone})=>{
 
   const localDateHour =new Date(dt*1000-(timeZone*1000))
-  console.log(localDateHour);
   const fullDate= `${localDateHour.getDate()}/${(localDateHour.getMonth() + 1)}/${localDateHour.getFullYear()}`
 
   const fullHour= `${localDateHour.getHours()}:${localDateHour.getMinutes()}:${localDateHour.getSeconds()}`
