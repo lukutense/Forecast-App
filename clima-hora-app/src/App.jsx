@@ -8,9 +8,10 @@ import axios from 'axios'
 import 'remixicon/fonts/remixicon.css'
 
 
-function App() {
 
-  const API_KEY= 'e76c4ab2c944fea7ea9d21b4b0cc665b'
+function App() {
+  
+ 
   const [inputValue, setInputValue]= useState('')
   const [dataCity,setDataCity]=useState(null)
   const [icon, setIcon]= useState('')
@@ -20,8 +21,10 @@ function App() {
   const [bool,setBool]= useState(true)
 
 useEffect(()=>{
+
+
   const wheaterData= async ()=>{
-    const res = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${inputValue}&appid=${API_KEY}&units=metric`)
+    const res = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${inputValue}&appid=${import.meta.env.VITE_KEY_OWM}&units=metric`)
     const data = await res.data
     setDataCity(data)
     setIcon(data.weather[0].icon)
